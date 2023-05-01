@@ -9,4 +9,7 @@ Technology stack determines the type of applications you can build, the level of
 
 For example, a web tech stack typically looks like:
 
+![web stack](https://markdown-here.com/img/icon256.png)
+
+
 > NB: For this project, i already created an EC2 server on AWS, i just need to connect to it. 
