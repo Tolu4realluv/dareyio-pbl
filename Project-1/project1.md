@@ -19,8 +19,30 @@ There are acronymns for individual technologies used together for a specific tec
 
 And for this project, we are implemenitng LAMP stack solution.
 
-> NB: For this project, i already created an EC2 server on AWS, i just need to connect to it to start the implementation. 
 ---
 ## Connectint to the EC2 server through SSH
+> NB: For this project, i already created an EC2 server on AWS, i just need to connect to it to start the implementation.
+ 
 ```ssh -i "mykey.pem" ec2-user@ec2-54-152-255-29.compute-1.amazonaws.com ```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/Connect.JPG)
+
+---
+## INSTALLING APACHE AND UPDATING THE FIREWALL
+### What is Apache?
+Apache HTTP Server is the most widely used web server software. Developed and maintained by Apache Software Foundation, Apache is an open source software available for free. It runs on 67% of all webservers in the world. It is fast, reliable, and secure. It can be highly customized to meet the needs of many different environments by using extensions and modules. Most WordPress hosting providers use Apache as their web server software. However, websites and other applications can run on other web server software as well. Such as Nginx, Microsoft’s IIS, etc.
+
+The Apache web server is among the most popular web servers in the world. It’s well documented, has an active community of users, and has been in wide use for much of the history of the web, which makes it a great default choice for hosting a website.
+
+#### To install Apache using ubuntu's package manager we run the following commands
+``` sudo apt update  ```
+
+``` sudo apt install apache2  ```
+
+> NB: if your operating system is Amazon Linux based AMI, use yum package manager instead of apt
+> you can follow the instruction on this [Link](https://docs.rackspace.com/support/how-to/centos-7-apache-and-php-install/) to install Apache on AMI 
+
+
+After successfull installation, it takes us to the test page for Apache 2
+
 
