@@ -46,3 +46,22 @@ The Apache web server is among the most popular web servers in the world. It’s
 After successfull installation, it takes us to the test page for Apache 2
 
 
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/Apache.JPG)
+---
+
+## INSTALLING INSTALLING MYSQL
+
+Now that we have a web server up and running, we need to install a Database Management System (DBMS) to be able to store and manage data for your site in a relational database.
+MySQL is a relational database management system (RDBMS) developed by Oracle that is based on structured query language (SQL).  MySQL is a popular relational database management system used within PHP environments, so we will use it in our project.
+
+#### To install MYSQL using ubuntu's package manager we run the following commands
+
+```sudo apt install mysql-server```
+
+when prompted, confirm installation by typing y
+
+After successfully installing mysql
+
+
+
+
