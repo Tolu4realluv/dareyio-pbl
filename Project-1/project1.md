@@ -1,4 +1,4 @@
-# PROJECT 1 WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
+# WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
 ---
 
 ## What is a Technology stack?
@@ -9,7 +9,18 @@ Technology stack determines the type of applications you can build, the level of
 
 For example, a web tech stack typically looks like:
 
-![web stack](https://markdown-here.com/img/icon256.png)
+![web stack](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/web%20stack.png)
 
+There are acronymns for individual technologies used together for a specific technology product. some examples are…
+* LAMP (Linux, Apache, MySQL, PHP or Python, or Perl)
+* LEMP (Linux, Nginx, MySQL, PHP or Python, or Perl)
+* MERN (MongoDB, ExpressJS, ReactJS, NodeJS)
+* MEAN (MongoDB, ExpressJS, AngularJS, NodeJS
 
-> NB: For this project, i already created an EC2 server on AWS, i just need to connect to it. 
+And for this project, we are implemenitng LAMP stack solution.
+
+> NB: For this project, i already created an EC2 server on AWS, i just need to connect to it to start the implementation. 
+---
+## Connectint to the EC2 server through SSH
+```ssh -i "mykey.pem" ec2-user@ec2-54-152-255-29.compute-1.amazonaws.com ```
+
