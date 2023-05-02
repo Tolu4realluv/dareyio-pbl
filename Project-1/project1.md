@@ -177,4 +177,4 @@ Finally, checking code status on browser:
 
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/php%20test.JPG)
 
-The Image Shows everything is working perfectly and we have successfully deployeg a LAMP stack website in AWS Cloud.
+The Image Shows everything is working perfectly and we have successfully deployed a LAMP stack website in AWS Cloud.
