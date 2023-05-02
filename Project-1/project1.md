@@ -129,3 +129,49 @@ The new website is now active, but the web root /var/www/projectlamp is still em
 sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
 
 ```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/Test%20web.JPG)
+
+---
+
+## ENABLE PHP ON THE WEBSITE
+
+With the default DirectoryIndex settings on Apache, a file named index.html will always take precedence over an index.php file. This is useful for setting up maintenance pages in PHP applications, by creating a temporary index.html file containing an informative message to visitors. Because this page will take precedence over the index.php page, it will then become the landing page for the application. Once maintenance is over, the index.html is renamed or removed from the document root, bringing back the regular application page.
+
+In case we want to change this behavior, we’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
+
+```sudo vim /etc/apache2/mods-enabled/dir.conf```
+
+Ant the add the following config
+
+```
+<IfModule mod_dir.c>
+        #Change this:
+        #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+        #To this:
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+```
+
+After saving and closing the file, we reload Apache so the changes take effect:
+
+```sudo systemctl reload apache2```
+
+Finally, we create a PHP script to test that PHP is correctly installed and configured on our server.
+
+Now that we have a custom location to host our website’s files and folders, we’ll create a PHP test script to confirm that Apache is able to handle and process requests for PHP files.
+
+we Create a new file named index.php inside our custom web root folder:
+
+``` vim /var/www/projectlamp/index.php ```
+
+This open a blank file. we then add the following text, which is valid PHP code, inside the file:
+
+``` 
+<?php
+phpinfo();
+```
+
+Finally, checking code status on browser:
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/Test%20web.JPG)
