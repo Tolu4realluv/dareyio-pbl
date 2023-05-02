@@ -129,6 +129,7 @@ The new website is now active, but the web root /var/www/projectlamp is still em
 sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
 
 ```
+we confirmed this by opening a new browser tab and navigating to our EC2 public IP Address
 
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/Test%20web.JPG)
 
@@ -174,4 +175,6 @@ phpinfo();
 
 Finally, checking code status on browser:
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/Test%20web.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/php%20test.JPG)
+
+The Image Shows everything is working perfectly and we have successfully deployeg a LAMP stack website in AWS Cloud.
