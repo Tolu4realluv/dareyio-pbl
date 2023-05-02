@@ -74,4 +74,58 @@ We have Apache installed to serve your content and MySQL installed to store and 
 
 ```sudo apt install php libapache2-mod-php php-mysql```
 
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/Php.JPG)
 
+---
+
+## CREATING A VIRTUAL HOST FOR YOUR WEBSITE USING APACHE
+
+In this project, we set up a domain called projectlamp
+
+Create the directory for projectlamp using ‘mkdir’ command as follows:
+
+```sudo mkdir /var/www/projectlamp```
+
+Next, we assign ownership of the directory with our current system user:
+
+```sudo chown -R $USER:$USER /var/www/projectlamp```
+
+Then, we create and open a new configuration file in Apache’s sites-available directory using vim
+
+```sudo vi /etc/apache2/sites-available/projectlamp.conf```
+
+This will create a new blank file. we Paste in the following bare-bones configuration by hitting on i on the keyboard to enter the insert mode, and paste the text:
+
+```
+<VirtualHost *:80>
+    ServerName projectlamp
+    ServerAlias www.projectlamp 
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/projectlamp
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+```
+To save and close the file, we follow the steps below:
+1. Hit the esc button on the keyboard
+2. Type :
+3. Type wq. w for write and q for quit
+4. Hit ENTER to save the file
+
+we use a2ensite command to enable the new virtual host, disable the default host, test the config file then finally reload apache2 to update changes: 
+
+```sudo a2ensite projectlamp```
+
+```sudo a2dissite 000-default```
+
+```sudo apache2ctl configtest```
+
+```sudo systemctl reload apache2```
+
+The new website is now active, but the web root /var/www/projectlamp is still empty. we Create an index.html file in that location so that we can test that the virtual host works as expected:
+
+```
+sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
+
+```
