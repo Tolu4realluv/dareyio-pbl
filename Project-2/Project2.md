@@ -26,10 +26,25 @@ And for this project, we are implemenitng LEMP stack solution.
 
 ```ssh -i "mykey.pem" ubuntu@ec2-54-204-72-76.compute-1.amazonaws.com ```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/Connect.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/ubuntu.JPG)
 
 Then Update my software packages by running:
 
 ```sudo apt update ```
+
+---
+
+## INSTALLING THE NGINX WEB SERVER
+NGINX is open-source web server software used for reverse proxy, load balancing, and caching. It provides HTTPS server capabilities and is mainly designed for maximum performance and stability. It also functions as a proxy server for email communications protocols, such as IMAP, POP3, and SMTP.
+
+In order to display web pages to our site visitors, we are going to employ Nginx, a high-performance web server. We’ll use the apt package manager to install this package:
+
+```sudo apt install nginx ```
+
+To verify if Nginx is running:
+
+```sudo netstat -tulpn | grep nginx ```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/ubuntu.JPG)
 
 
