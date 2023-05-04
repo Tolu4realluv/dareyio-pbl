@@ -246,6 +246,8 @@ We then create new user and grant him full priviledge with the Database we just 
 
 ```CREATE USER 'makay'@'%' IDENTIFIED WITH mysql_native_password BY '*****'; ```
 
+```GRANT ALL ON makay_database.* TO 'makay'@'%';
+
 This gives the makay user full privileges over the makay_database database, while preventing this user from creating or modifying other databases on our server.
 
 We then exit the mysql shell:
@@ -260,9 +262,18 @@ And then check to see the databases
 
 ```show databases; ```
 
-![]()
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/database.JPG)
 
 Next, we’ll create a test table named kay_list. From the MySQL console, we run the following statement:
+
+```
+CREATE TABLE makay_database.kay_list (
+mysql>     item_id INT AUTO_INCREMENT,
+mysql>     content VARCHAR(255),
+mysql>     PRIMARY KEY(item_id)
+mysql> );
+
+```
 
 
 
