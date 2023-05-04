@@ -199,5 +199,26 @@ sudo echo 'Hello LEMP from Toluwase' $(curl -s http://169.254.169.254/latest/met
 
 We check this by typing our EC2 public ip address in a browser
 
-```http://<Public-IP-Address>:80
+```http://<Public-IP-Address>:80 ```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/web.JPG)
+
+## TESTING PHP WITH NGINX
+
+At this point, our LEMP stack is completely installed and fully operational. we test it to validate that Nginx can correctly hand .php files off to our PHP processor.
+we do this by creating a test PHP file in our document root. we opened a new file called info.php within our document root in our text editor:\
+
+```sudo nano /var/www/projectLEMP/info.php ```
+
+We then paste the following lines into the new file. This is valid PHP code that returns information about our server:
+
+```
+<?php
+phpinfo(); 
+
+```
+
+We access this page in our web browser by visiting the domain name or public IP address we’ve set up in our Nginx configuration file, followed by /info.php:
+
+```http://`server_domain_or_IP`/info.php ```
 
