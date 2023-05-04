@@ -41,10 +41,50 @@ In order to display web pages to our site visitors, we are going to employ Nginx
 
 ```sudo apt install nginx ```
 
-To verify if Nginx is running:
+To verify Nginx is running:
 
 ```sudo netstat -tulpn | grep nginx ```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/ubuntu.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/Nginx.JPG)
+
+---
+
+## INSTALLING MYSQL
+
+Now that we have a web server up and running, we need to install a Database Management System (DBMS) to be able to store and manage data for your site in a relational database.
+MySQL is a relational database management system (RDBMS) developed by Oracle that is based on structured query language (SQL).  MySQL is a popular relational database management system used within PHP environments, so we will use it in our project.
+
+#### To install MYSQL using ubuntu's package manager we run the following commands
+
+```sudo apt install mysql-server```
+
+when prompted, confirm installation by typing y
+
+connect to the database:
+
+```sudo mysql```
+
+It’s recommended that we run a security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to our database system. Before running the script we will set a password for the root user, using mysql_native_password as default authentication method. We’re defining this user’s password as PassWord.2:
+
+``` ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1'; ```
+
+Then we Exit MYSQL shell:
+
+``` exit ```
+
+Then Start the interactive script by running:
+
+``` sudo mysql_secure_installation ```
+
+This asked if we'll like to set-up VALIDATE PASSWORD COMPONENT which we say NO
+
+we can now log-in to MYSQL with the root password and run some queries:
+
+``` sudo mysql -p ```
+
+After successfully installing and testing mysql:
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/mysql.JPG)
+
 
 
