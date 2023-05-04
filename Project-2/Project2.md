@@ -244,9 +244,10 @@ Creating a new Database with the command:
 
 We then create new user and grant him full priviledge with the Database we just created:
 
-```CREATE USER 'makay'@'%' IDENTIFIED WITH mysql_native_password BY '*****'; ```
+```CREATE USER 'makay'@'%' IDENTIFIED WITH mysql_native_password BY 'password'; ```
 
-```GRANT ALL ON makay_database.* TO 'makay'@'%';
+```GRANT ALL ON makay_database.* TO 'makay'@'%'; ```
+
 
 This gives the makay user full privileges over the makay_database database, while preventing this user from creating or modifying other databases on our server.
 
@@ -263,6 +264,7 @@ And then check to see the databases
 ```show databases; ```
 
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/database.JPG)
+
 
 Next, we’ll create a test table named kay_list. From the MySQL console, we run the following statement:
 
@@ -286,8 +288,45 @@ Then we Insert a few rows of content in the test table. we repeat the command a 
 
 ```INSERT INTO makay_database.kay_list (content) VALUES ("My number five to-do item"); ```
 
-To confirm that the data was successfully saved to your table, run:
+
+To confirm that the data was successfully saved to our table, we run:
 
 ```SELECT * FROM makay_database.kay_list; ```
 
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/kaylist.JPG)
+
+We can now exit mysql shell
+
+```exit ```
+
+Now we can create a PHP script that will connect to MySQL and query for our content. We create a new PHP file in our custom web root directory using our preferred editor. We’ll use nano for that:
+
+```nano /var/www/projectLEMP/kay_list.php ```
+
+And then we paste the config script that connects to the MySQL database and queries for the content of the kay_list table, displays the results in a list. If there is a problem with the database connection, it will throw an exception:
+
+```
+<?php
+$user = "makay";
+$password = "password";
+$database = "makay_database";
+$table = "kay_list";
+
+try {
+  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+  echo "<h2>TODO</h2><ol>";
+  foreach($db->query("SELECT content FROM $table") as $row) {
+    echo "<li>" . $row['content'] . "</li>";
+  }
+  echo "</ol>";
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+
+```
+
+We save and close the file by typiny CTRL X, Y and Enter
+
+We can now access this page in our web browser by visiting the domain name or public IP address configured for our website, followed by /kay_list.php:
 
