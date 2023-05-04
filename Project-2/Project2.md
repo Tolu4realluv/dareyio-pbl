@@ -268,12 +268,26 @@ Next, we’ll create a test table named kay_list. From the MySQL console, we run
 
 ```
 CREATE TABLE makay_database.kay_list (
-mysql>     item_id INT AUTO_INCREMENT,
-mysql>     content VARCHAR(255),
-mysql>     PRIMARY KEY(item_id)
-mysql> );
+    item_id INT AUTO_INCREMENT,
+    content VARCHAR(255),
+    PRIMARY KEY(item_id) );
 
 ```
 
+Then we Insert a few rows of content in the test table. we repeat the command a few times, using different VALUES:
+
+```INSERT INTO makay_database.kay_list (content) VALUES ("My first important item"); ```
+
+```INSERT INTO makay_database.kay_list (content) VALUES ("My second important item"); ```
+
+```INSERT INTO makay_database.kay_list (content) VALUES ("My third important item"); ```
+
+```INSERT INTO makay_database.kay_list (content) VALUES ("my number four to-do item"); ```
+
+```INSERT INTO makay_database.kay_list (content) VALUES ("My number five to-do item"); ```
+
+To confirm that the data was successfully saved to your table, run:
+
+```SELECT * FROM makay_database.kay_list; ```
 
 
