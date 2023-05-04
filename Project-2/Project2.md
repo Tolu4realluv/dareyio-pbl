@@ -84,7 +84,28 @@ we can now log-in to MYSQL with the root password and run some queries:
 
 After successfully installing and testing mysql:
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-1/mysql.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/mysql.JPG)
+
+---
+
+## Installing PHP
+
+We have Nginx installed to serve our content and MySQL installed to store and manage our data. Now you can install PHP to process code and generate dynamic content for the web server.
+
+While Apache embeds the PHP interpreter in each request, Nginx requires an external program to handle PHP processing and act as a bridge between the PHP interpreter itself and the web server. This allows for a better overall performance in most PHP-based websites, but it requires additional configuration. we’ll need to install php-fpm, which stands for “PHP fastCGI process manager”, and tell Nginx to pass PHP requests to this software for processing. Additionally, we’ll need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. Core PHP packages will automatically be installed as dependencies.
+
+To install these packages at once, we run:
+
+``` sudo apt install php php-fpm php-mysql ```
+
+we enter 'Y' for any prompt
+
+To check PHP is properly installed:
+
+``` php -v ```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/mysql.JPG)
+
 
 
 
