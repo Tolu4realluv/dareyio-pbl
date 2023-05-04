@@ -178,3 +178,26 @@ This will tell Nginx to use the configuration next time it is reloaded. we test 
 
 ```sudo nginx -t ```
 
+and we have:
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/syntax%20ok.JPG)
+
+We also need to disable default Nginx host that is currently configured to listen on port 80, for this we run:
+
+```sudo unlink /etc/nginx/sites-enabled/default ```
+
+We then reload Nginx to apply the changes:
+
+```sudo systemctl reload nginx ```
+
+our new website is now active, but the web root /var/www/projectLEMP is still empty. We created an index.html file in that location so that we can test that our new server block works as expected:
+
+```
+sudo echo 'Hello LEMP from Toluwase' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html
+
+```
+
+We check this by typing our EC2 public ip address in a browser
+
+```http://<Public-IP-Address>:80
+
