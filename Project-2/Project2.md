@@ -222,3 +222,47 @@ We access this page in our web browser by visiting the domain name or public IP 
 
 ```http://`server_domain_or_IP`/info.php ```
 
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/info%20page.JPG)
+
+This shows that our NGINX can now handle PHP files
+
+---
+
+## RETRIEVING DATA FROM MYSQL DATABASE WITH PHP
+
+In this step we will create a test database (DB) with simple "To do list" and configure access to it, so the Nginx website would be able to query data from the DB and display it. We’ll need to create a new user with the mysql_native_password authentication method in order to be able to connect to the MySQL database from PHP.
+
+We will create a database named makay_database and a user named makay.
+
+Connecting to the msql root user:
+
+``` sudo mysql -p ```
+
+Creating a new Database with the command:
+
+```CREATE DATABASE `makay_database`; ```
+
+We then create new user and grant him full priviledge with the Database we just created:
+
+```CREATE USER 'makay'@'%' IDENTIFIED WITH mysql_native_password BY '*****'; ```
+
+This gives the makay user full privileges over the makay_database database, while preventing this user from creating or modifying other databases on our server.
+
+We then exit the mysql shell:
+
+```exit ```
+
+And then test connection to our new Database:
+
+```mysql -u makay -p ``` 
+
+And then check to see the databases
+
+```show databases; ```
+
+![]()
+
+Next, we’ll create a test table named kay_list. From the MySQL console, we run the following statement:
+
+
+
