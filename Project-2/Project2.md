@@ -330,3 +330,9 @@ We save and close the file by typiny CTRL X, Y and Enter
 
 We can now access this page in our web browser by visiting the domain name or public IP address configured for our website, followed by /kay_list.php:
 
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/todo.JPG)
+
+This means our PHP environment is ready to connect and interact with our MySQL server
+
+This Shows everything is working perfectly and we have successfully deployed and configured a LEMP stack website in AWS Cloud.
+
