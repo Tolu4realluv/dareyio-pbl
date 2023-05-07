@@ -300,4 +300,8 @@ For this project, we will make use of mLab. mLab provides MongoDB database as a 
 
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/mongo1.JPG)
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/mongo1.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/mongo2.JPG)
+
+Allow access to the MongoDB database from anywhere:
+
+![]()
