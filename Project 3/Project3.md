@@ -381,6 +381,10 @@ Now we open our Postman, create a POST request to the API:
 ```http://52.206.208.144:5000/api/todos ```
 This request sends a new task to our To-Do list so the application could store it in the database.
 
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/postman1.JPG)
+
+We can now send a GET request to retrieve our data from the DB:
+
 
 
 
