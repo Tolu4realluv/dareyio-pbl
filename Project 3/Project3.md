@@ -19,6 +19,13 @@ There are acronymns for individual technologies used together for a specific tec
 
 And for this project, we are implemenitng MERN stack solution.
 
+MERN Web stack consists of following components:
+
+1. MongoDB: A document-based, No-SQL database used to store application data in a form of documents.
+2. ExpressJS: A server side Web Application framework for Node.js.
+3. ReactJS: A frontend framework developed by Facebook. It is based on JavaScript, used to build User Interface (UI) components.
+4. Node.js: A JavaScript runtime environment. It is used to run JavaScript on a machine rather than in a browser.
+
 ---
 ## Connecting to the EC2 server through SSH
 > NB: For this project, i already created an EC2 server on AWS, i just need to connect to it to start the implementation.
@@ -26,10 +33,32 @@ And for this project, we are implemenitng MERN stack solution.
 
 ```ssh -i "mykey.pem" ubuntu@ec2-52-206-208-144.compute-1.amazonaws.com ```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project-2/ubuntu.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/ubuntu.JPG)
 
 Then Update my software packages by running:
 
 ```sudo apt update ```
 
 ---
+
+Then upgrade ubuntu by running:
+
+```sudo apt upgrade ```
+
+## BACKEND CONFIGURATION
+
+Firstly, Lets get the location of Node.js software from Ubuntu repositories.
+
+```curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - ```
+
+Then we installed Node.js and npm with the command:
+
+``` sudo apt-get install -y nodejs ```
+
+We verify the node installation with the command:
+
+```node -v ```
+
+``` npm -v ``` 
+
+![]()
