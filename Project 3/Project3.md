@@ -399,6 +399,8 @@ In the same root directory as our backend code, which is the Todo directory, we 
 
 This will create a new folder in our Todo directory called client, where we will add all the react code.
 
+### Running a React App
+
 Before testing the react app, there are some dependencies that need to be installed.
 
 1. Install concurrently. It is used to run more than one command simultaneously from the same terminal window.
@@ -419,7 +421,26 @@ Before testing the react app, there are some dependencies that need to be instal
 },
 
 ``` 
-![]()
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/script.jpg)
 
+### Configure Proxy in package.json
+
+1. Change directory to ‘client’
+
+```cd client ```
+
+2. Open the package.json file
+
+```vim package.json ```
+
+3. Add the key value pair in the package.json file "proxy": "http://localhost:5000".
+
+The whole purpose of adding the proxy configuration in number 3 above is to make it possible to access the application directly from the browser by simply calling the server url like http://52.206.208.144:5000 rather than always including the entire path like http://52.206.208.144:5000/api/todos
+
+Now, we CD back inside the Todo directory, and simply do:
+
+```npm run dev ```
+
+Our App is now running on port 3000. to access it via browser, we update our security group rule to allow inbound connection on port 3000.
 
 
