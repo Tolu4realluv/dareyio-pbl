@@ -298,4 +298,6 @@ We need a database where we will store our data. MongoDB is a source-available c
 
 For this project, we will make use of mLab. mLab provides MongoDB database as a service solution (DBaaS), so to make life easy, we will will need to sign up for a shared clusters free account, which is ideal for our use case. [Sign up here](https://www.mongodb.com/atlas-signup-from-mlab). Follow the sign up process, select AWS as the cloud provider, and choose a region near us.
 
-![]()
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/mongo1.JPG)
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/mongo1.JPG)
