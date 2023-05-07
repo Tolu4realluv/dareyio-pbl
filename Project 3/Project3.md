@@ -370,5 +370,19 @@ Starting our server using the command:
 
 ```node index.js ```
 
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/todo%20server.JPG)
+
+So far we have written backend part of our To-Do application, and configured a database, but we do not have a frontend UI yet. We need ReactJS code to achieve that. But during development, we will need a way to test our code using RESTfull API. Therefore, we will need to make use of some API development client to test our code.
+
+In this project, we will use Postman to test our API. [Click](https://www.postman.com/downloads/) Install Postman to download and install postman on our machine.
+
+Now we open our Postman, create a POST request to the API:
+
+```http://52.206.208.144:5000/api/todos ```
+This request sends a new task to our To-Do list so the application could store it in the database.
+
+
+
+
 
 
