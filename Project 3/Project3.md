@@ -304,4 +304,71 @@ For this project, we will make use of mLab. mLab provides MongoDB database as a 
 
 Allow access to the MongoDB database from anywhere:
 
-![]()
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/mongo3.JPG)
+
+
+In the index.js file, we specified process.env to access environment variables, but we have not yet created this file. So we need to do that now.
+
+We create a file in our Todo directory and name it .env:
+
+```
+touch .env
+vi .env
+
+```
+
+And Add our connection string into our application code:
+
+```mongodb+srv://Tolu4realluv:<password>@kaycuster.fgsh3gv.mongodb.net/?retryWrites=true&w=majority ```
+
+Now we need to update the index.js to reflect the use of .env so that Node.js can connect to the database by deleting the existing content in the file, and update it with the entire code below:
+
+```
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const routes = require('./routes/api');
+const path = require('path');
+require('dotenv').config();
+
+const app = express();
+
+const port = process.env.PORT || 5000;
+
+//connect to the database
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => console.log(`Database connected successfully`))
+.catch(err => console.log(err));
+
+//since mongoose promise is depreciated, we overide it with node's promise
+mongoose.Promise = global.Promise;
+
+app.use((req, res, next) => {
+res.header("Access-Control-Allow-Origin", "\*");
+res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+next();
+});
+
+app.use(bodyParser.json());
+
+app.use('/api', routes);
+
+app.use((err, req, res, next) => {
+console.log(err);
+next();
+});
+
+app.listen(port, () => {
+console.log(`Server running on port ${port}`)
+});
+
+```
+
+Using environment variables to store information is considered more secure and best practice to separate configuration and secret data from the application, instead of writing connection strings directly inside the index.js application file.
+
+Starting our server using the command:
+
+```node index.js ```
+
+
+
