@@ -137,5 +137,11 @@ Now it is time to start our server to see if it works by opening the terminal in
 
 ```node index.js ```
 
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/index.JPG)
+
+We can now access our App by updating our EC2 security group to allow inboud connection on port 5000 as listed in our code.
+
+
+
 
 
