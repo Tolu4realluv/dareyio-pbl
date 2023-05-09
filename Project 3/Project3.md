@@ -784,9 +784,11 @@ Then we CD back to the Todo directory and run:
 
 ```npm run dev ```
 
+We can now see our App running on port 3000 using our browser.
+
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/todo%20app.JPG)
 
-This shows that our To-Do app is ready and fully functional with the functionality discussed earlier: creating a task, deleting a task and viewing all your tasks.
+This shows that our To-Do app is ready and fully functional with the functionality discussed earlier: creating a task, deleting a task and viewing all our tasks.
 
 
 
