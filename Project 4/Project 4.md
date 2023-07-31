@@ -50,9 +50,61 @@ Then upgrade Ubuntu by running:
 
 Add certificates
 
-
 ```sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates```
 
 ```curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - ```
+
+Install NodeJS
+
+```sudo apt install -y nodejs```
+
+## Installing MongoDB.
+MongoDB stores data in flexible, JSON-like documents. Fields in a database can vary from document to document, and data structure can be changed over time. For our example application, we are adding book records to MongoDB that contain the book name, ISBN number, author, and number of pages.
+
+To import the Public Key used by Package Management System:
+```sudo apt-get install gnupg curl```
+
+``curl -fsSL https://pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor```` 
+
+To create a List file For MongoDB for Ubuntu 22.04:
+
+```
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+
+```
+
+Then we reload Local Packages
+
+```sudo apt-get update```
+
+Install MongoDB
+
+```sudo apt-get install -y mongodb-org```
+
+To start and enable the Mongod service:
+
+```
+sudosystemctl start mongod
+
+sudosystemctl enable mongod
+
+```
+To verify that the service is up and running
+
+```sudo systemctl status mongod```
+
+### To Install the body-parser package.
+
+We need the ‘body-parser’ package to help us process JSON files passed in requests to the server.
+
+
+
+
+
+
+
+
+
+
 
 
