@@ -32,5 +32,5 @@ MEAN Web stack consists of the following components:
 
 ```ssh -i "mykey.pem" ubuntu@ec2-3-89-215-83.compute-1.amazonaws.com```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%203/ubuntu.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%204/ubuntu%20connect.JPG)
 
