@@ -24,7 +24,9 @@ MEAN Web stack consists of the following components:
 1. MongoDB: A document-based, No-SQL database used to store application data as documents.
 2. ExpressJS: A server-side Web Application framework for Node.js. Makes requests to Database for Reads and Writes
 3. Angular: (Front-end application framework) – Handles Client and Server Requests
-4. Node.js: A JavaScript runtime environment. It runs JavaScript on a machine rather than in a browser. It accepts requests and displays results to the end user
+4. Node.js: A JavaScript runtime environment. It runs JavaScript on a machine rather than in a browser. It accepts requests and displays results to the end user.
+
+In this Project, we are implementing a simple Book Register web form using MEAN stack.
 
 ---
 ## Connecting to the EC2 server through SSH
@@ -33,4 +35,25 @@ MEAN Web stack consists of the following components:
 ```ssh -i "mykey.pem" ubuntu@ec2-3-89-215-83.compute-1.amazonaws.com```
 
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%204/ubuntu%20connect.JPG)
+
+## Installing NodeJs
+
+Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js is used in this project to set up the Express routes and AngularJS controllers.
+
+Firstly, I Update my software packages by running:
+
+```sudo apt update ```
+
+---
+
+Then upgrade Ubuntu by running:
+
+```sudo apt upgrade -y```
+
+Add certificates
+
+```sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
+
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - ```
+
 
