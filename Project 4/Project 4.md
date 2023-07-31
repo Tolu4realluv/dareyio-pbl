@@ -353,10 +353,9 @@ We then start the server by running this command:
 
 The server is now up and running, we can connect it via port 3300 or using our EC2 public ip address:3300.
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%204/ubuntu%20connect.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%204/Book-App.JPG)
 
-
-
+This shows that our Book Register web form is ready and we can add as many as possible entries.
 
 
 
