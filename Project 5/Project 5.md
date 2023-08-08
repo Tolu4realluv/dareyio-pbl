@@ -24,9 +24,22 @@ Both of our EC2 servers are located in the same local network, so we will connec
 
 ```ssh -i "mykey.pem" ubuntu@ec2-52-90-160-253.compute-1.amazonaws.com```
 
+
 Connected Successfully to the MySQL server
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/connect%201.JPG)
 
+Connected Successfully to MySQL client 
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/Connect%202.JPG)
 
+### Installing MySQL server software on Mysql server EC2 instance
 
+We installed the mysql server with the command:
 
+```sudo apt install mysql-server```
+
+To check the installation status we use the command
+
+```sudo service mysql status```
+
+And we have this which shows the installation is successful.
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/Connect%202.JPG)
