@@ -21,7 +21,12 @@ Both of our EC2 servers are located in the same local network, so we will connec
 > NB: For this project, I already created the EC2 server on AWS, I just need to connect to it to start the implementation. I also use two terminals, one for the Server and one fore the Client.
 
 ``` ssh -i "mykey.pem" ubuntu@ec2-184-72-73-85.compute-1.amazonaws.com ```
+
 ```ssh -i "mykey.pem" ubuntu@ec2-52-90-160-253.compute-1.amazonaws.com```
+
+Connected Successfully to the MySQL server
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/connect%201.JPG)
+
 
 
 
