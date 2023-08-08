@@ -11,7 +11,7 @@ Client-server architecture is a computer network architecture in which many clie
 
 From the picture above, our Web Server has a role of a “Client” that connects and reads/writes to/from a Database (DB) Server (MySQL, MongoDB, Oracle, SQL Server, or any other). The communication between them happens over a Local Network (it can also be Internet connection, but it is a common practice to place Web Server and DB Server close to each other in local network).
 
-For this project, we are creating two Linux-based virtual servers (EC2 instances in AWS). 
+For this project, we are provisioning two Linux-based virtual servers (EC2 instances in AWS). 
 * Server A name - `mysql server`
 * Server B name - `mysql client`
 Both of our EC2 servers are located in the same local network, so we will connect them using their respective Ip Address and have them send and return requests between each-other.
@@ -19,6 +19,9 @@ Both of our EC2 servers are located in the same local network, so we will connec
 ## Connecting to the EC2 servers through SSH
 
 > NB: For this project, I already created the EC2 server on AWS, I just need to connect to it to start the implementation. I also use two terminals, one for the Server and one fore the Client.
+
+``` ssh -i "mykey.pem" ubuntu@ec2-184-72-73-85.compute-1.amazonaws.com ```
+```ssh -i "mykey.pem" ubuntu@ec2-52-90-160-253.compute-1.amazonaws.com```
 
 
 
