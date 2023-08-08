@@ -31,7 +31,7 @@ Connected Successfully to the MySQL server
 Connected Successfully to MySQL client 
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/Connect%202.JPG)
 
-### Installing MySQL server software on Mysql server EC2 instance
+### Installing MySQL Server software on the mysql server EC2 instance
 
 We installed the mysql server with the command:
 
@@ -41,5 +41,16 @@ To check the installation status we use the command
 
 ```sudo service mysql status```
 
-And we have this which shows the installation is successful.
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/Connect%202.JPG)
+And we have this, which shows the installation is successful.
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/mysql%20status.JPG)
+
+### Installing MySQL Client software on mysql client EC2 instance
+
+We installed the mysql client with the command:
+
+```sudo apt install mysql-client```
+
+By default, both of our EC2 virtual servers are located in the same local virtual network, so they can communicate to each other using local IP addresses. We use mysql server's local IP address to connect from mysql client. MySQL server uses TCP port 3306 by default, so we must open it by creating a new entry in ‘Inbound rules’ in ‘mysql server’ Security Groups. For extra security, we do not allow all IP addresses to reach our ‘mysql server’. We only allow access to the specific local IP address of our ‘mysql client’.
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/mysql%20status.JPG)
+
