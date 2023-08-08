@@ -52,5 +52,15 @@ We installed the mysql client with the command:
 
 By default, both of our EC2 virtual servers are located in the same local virtual network, so they can communicate to each other using local IP addresses. We use mysql server's local IP address to connect from mysql client. MySQL server uses TCP port 3306 by default, so we must open it by creating a new entry in ‘Inbound rules’ in ‘mysql server’ Security Groups. For extra security, we do not allow all IP addresses to reach our ‘mysql server’. We only allow access to the specific local IP address of our ‘mysql client’.
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/mysql%20status.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/security%20group.JPG)
+
+## Configuring MySQL Server to allow connection from remote hosts.
+
+To configure MySQL server to allow connections from remote hosts, we use vim to open the mysqld.cnf file with this command:
+
+```sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf```
+
+And we search for the bind-address and Replace ‘127.0.0.1’ to ‘0.0.0.0’ like this: 
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/security%20group.JPG)
 
