@@ -18,7 +18,7 @@ Both of our EC2 servers are located in the same local network, so we will connec
 
 ## Connecting to the EC2 servers through SSH
 
-> NB: For this project, I already created the EC2 server on AWS, I just need to connect to it to start the implementation. I also use two terminals, one for the Server and one fore the Client.
+> NB: For this project, I already created the EC2 server on AWS, I need to connect to it to start the implementation. I also used two terminals, one for the Server and one for the Client.
 
 ``` ssh -i "mykey.pem" ubuntu@ec2-184-72-73-85.compute-1.amazonaws.com ```
 
@@ -89,6 +89,16 @@ To verify our new user is created, we run the command:
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/new%20user.JPG)
 
 And we can see that user toluwase is now created.
+
+## Connecting to database from MySQL Client EC2 instance.
+
+After creating the remote user, we can now head to the mysql client EC2 instance shell and connect to the database by using the command:
+
+```mysql --host=172.31.83.19 --user=toluwase --password=toluwase123```
+
+> NB: The IP address in the command is the private IP address of the MySQL Server EC2 instance.
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/new%20user.JPG)
 
 
 
