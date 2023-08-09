@@ -98,7 +98,14 @@ After creating the remote user, we can now head to the mysql client EC2 instance
 
 > NB: The IP address in the command is the private IP address of the MySQL Server EC2 instance.
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/new%20user.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/connected.JPG)
+
+The connection was successful. We can now start running queries on the database:
+
+```show databases;```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/connected.JPG)
+
 
 
 
