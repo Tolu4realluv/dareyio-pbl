@@ -86,7 +86,7 @@ To verify our new user is created, we run the command:
 
 ```select user,plugin,host from mysql.user;```
 
-![]()
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/new%20user.JPG)
 
 And we can see that user toluwase is now created.
 
