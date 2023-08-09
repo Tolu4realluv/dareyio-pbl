@@ -64,3 +64,15 @@ And we search for the bind-address and Replace ‘127.0.0.1’ to ‘0.0.0.0’ 
 
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/security%20group.JPG)
 
+## Creating a remote user on MySQL Server.
+
+After configuring mysql server to allow connections from remote hosts, we need to create a remote user that can access our database from remote hosts. to do this, we first connect to our mysql database on the mysql server EC2 instance:
+
+```sudo mysql```
+
+We can list all users in our database with the command:
+
+```select user,plugin,host from mysql.user;```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/security%20group.JPG)
+
