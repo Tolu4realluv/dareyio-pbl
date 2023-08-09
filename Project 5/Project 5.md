@@ -104,8 +104,9 @@ The connection was successful. We can now start running queries on the database:
 
 ```show databases;```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/connected.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/show%20databases.JPG)
 
+With this, we have successfully implemented a client-server architecture using MySQL DBMS on AWS.
 
 
 
