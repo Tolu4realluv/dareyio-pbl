@@ -74,5 +74,23 @@ We can list all users in our database with the command:
 
 ```select user,plugin,host from mysql.user;```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/security%20group.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/old%20users.JPG)
+
+This displays the list of all users that can access our database. To create a new remote user:
+
+```CREATE USER 'toluwase'@'%' IDENTIFIED WITH mysql_native_password BY 'toluwase123';```
+
+The % sign will allow connections from any remote IP address. toluwase is the username and the password is toluwase123 as shown in the command.
+
+To verify our new user is created, we run the command:
+
+```select user,plugin,host from mysql.user;```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/old%20users.JPG)
+
+And we can see that user toluwase is now created.
+
+
+
+
 
