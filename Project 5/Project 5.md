@@ -9,16 +9,16 @@ Client-server architecture is a computer network architecture in which many clie
 
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/Client-server2.png)
 
-From the picture above, our Web Server has a role of a “Client” that connects and reads/writes to/from a Database (DB) Server (MySQL, MongoDB, Oracle, SQL Server, or any other). The communication between them happens over a Local Network (it can also be Internet connection, but it is a common practice to place Web Server and DB Server close to each other in local network).
+From the picture above, our Web Server has a role of a “Client” that connects and reads/writes to/from a Database (DB) Server (MySQL, MongoDB, Oracle, SQL Server, or any other). The communication between them happens over a Local Network (it can also be an Internet connection, but it is a common practice to place Web Server and DB Server close to each other in local network).
 
 For this project, we are provisioning two Linux-based virtual servers (EC2 instances in AWS). 
 * Server A name - `mysql server`
 * Server B name - `mysql client`
-Both of our EC2 servers are located in the same local network, so we will connect them using their respective Ip Address and have them send and return requests between each-other.
+Both of our EC2 servers are located in the same local network, so we will connect them using their respective private IP Address and have them send and return requests to each other.
 
 ## Connecting to the EC2 servers through SSH
 
-> NB: For this project, I already created the EC2 server on AWS, I need to connect to it to start the implementation. I also used two terminals, one for the Server and one for the Client.
+> NB: For this project, I already created the EC2 server on AWS; I need to connect to it to start the implementation. I also used two terminals, one for the Server and one for the Client.
 
 ``` ssh -i "mykey.pem" ubuntu@ec2-184-72-73-85.compute-1.amazonaws.com ```
 
@@ -52,7 +52,7 @@ We installed the mysql client with the command:
 
 By default, both of our EC2 virtual servers are located in the same local virtual network, so they can communicate to each other using local IP addresses. We use mysql server's local IP address to connect from mysql client. MySQL server uses TCP port 3306 by default, so we must open it by creating a new entry in ‘Inbound rules’ in ‘mysql server’ Security Groups. For extra security, we do not allow all IP addresses to reach our ‘mysql server’. We only allow access to the specific local IP address of our ‘mysql client’.
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/security%20group.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/inbound.JPG)
 
 ## Configuring MySQL Server to allow connection from remote hosts.
 
@@ -66,7 +66,7 @@ And we search for the bind-address and Replace ‘127.0.0.1’ to ‘0.0.0.0’ 
 
 ## Creating a remote user on MySQL Server.
 
-After configuring mysql server to allow connections from remote hosts, we need to create a remote user that can access our database from remote hosts. to do this, we first connect to our mysql database on the mysql server EC2 instance:
+After configuring mysql server to allow connections from remote hosts, we need to create a remote user that can access our database from remote hosts. To do this, we first connect to our mysql database on the mysql server EC2 instance:
 
 ```sudo mysql```
 
@@ -80,7 +80,7 @@ This displays the list of all users that can access our database. To create a ne
 
 ```CREATE USER 'toluwase'@'%' IDENTIFIED WITH mysql_native_password BY 'toluwase123';```
 
-The % sign will allow connections from any remote IP address. toluwase is the username and the password is toluwase123 as shown in the command.
+The % sign will allow connections from remote hosts. toluwase is the username, and the password is toluwase123 as shown in the command.
 
 To verify our new user is created, we run the command:
 
