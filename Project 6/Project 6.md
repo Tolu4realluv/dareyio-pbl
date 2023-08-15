@@ -1,7 +1,7 @@
 # DEPLOYING A THREE-TIER ARCHITECTURE WEB SOLUTION WITH WORDPRESS ON AWS.
 ---
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%205/Client_Server_Architecture_1.webp)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/3-tier.jpg)
 
 ## What is a Thee tier Architecture?
 
