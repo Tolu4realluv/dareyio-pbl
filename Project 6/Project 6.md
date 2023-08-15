@@ -12,8 +12,8 @@ generic three-tier application.
 
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/image2.png)
 
-1 Presentation Layer (PL): This is the user interface such as the client server or browser on your laptop.
+1. Presentation Layer (PL): This is the user interface, such as the client-server or browser on your laptop.
 
-2 Business Layer (BL): This is the backend program that implements business logic. Application or Webserver
+2. Business Layer (BL): This is the backend program that implements business logic. Application or Webserver
 
-3 Data Access or Management Layer (DAL): This is the layer for computer data storage and data access. Database Server or File System Server such as FTP server, or NFS Server
+3. Data Access or Management Layer (DAL): This is the layer for computer data storage and data access. Database Server or File System Server such as FTP server or NFS Server
