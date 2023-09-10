@@ -33,7 +33,7 @@ We will be working working with several storage and disk management concepts, th
 We Launch an EC2 instance that will serve as “Web Server”. And create 3 volumes in the same AZ as our Web Server EC2, each of 10 GiB. This
 [Video](https://www.youtube.com/watch?v=HPXnXkBzIHw) shows us How to Add EBS Volume to an EC2 instance.
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/image2.png)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/add%20volumes.png)
 
 Then we attach all three volumes one by one to your Web Server EC2 instance
 
