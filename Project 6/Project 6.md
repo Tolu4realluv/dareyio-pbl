@@ -37,9 +37,10 @@ We Launch an EC2 instance that will serve as “Web Server”. And create 3 volu
 
 Then we attach all three volumes one by one to your Web Server EC2 instance
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/image2.png)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/attach%20volumes.png)
 
 After creating our EC2 server and adding the volumes, we connect to the inctances using:
+
 ```ssh -i "mykey.pem" ec2-user@ec2-34-230-24-179.compute-1.amazonaws.com```
 
 
