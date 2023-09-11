@@ -115,6 +115,42 @@ sudo lsblk
 
 ```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lvs.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lsblk3.JPG)
+
+We used mkfs.ext4 to format the logical volumes with ext4 filesystem
+
+```
+sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
+sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
+
+```
+
+We created /var/www/html directory to store website files and /home/recovery/logs to store backup of log data we then mount /var/www/html on apps-lv logical volume
+
+```
+sudo mkdir -p /var/www/html
+sudo mkdir -p /home/recovery/logs
+sudo mount /dev/webdata-vg/apps-lv /var/www/html/
+
+```
+
+We used rsync utility to backup all the files in the log directory /var/log into /home/recovery/logs (This is required before mounting the file system) 
+
+```sudo rsync -av /var/log/. /home/recovery/logs/```
+
+We mount /var/log on logs-lv logical volume. (Note that all the existing data on /var/log will be deleted. That is why it is important to backup the log files before we mount.)
+
+```sudo mount /dev/webdata-vg/logs-lv /var/log```
+
+We then restored our log files back into /var/log directory
+
+```sudo rsync -av /home/recovery/logs/log/. /var/log```
+
+We updated /etc/fstab file so that the mount configuration will persist after restart of the server.
+The UUID of the device will be used to update the /etc/fstab file;
+
+```sudo blkid```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lsblk3.JPG)
 
 
