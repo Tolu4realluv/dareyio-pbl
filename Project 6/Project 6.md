@@ -70,7 +70,6 @@ We now proceed to Install lvm2 package using ```sudo yum install lvm2```, then w
 We used pvcreate utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM
 
 ```
-
 sudo pvcreate /dev/xvdf1
 sudo pvcreate /dev/xvdg1
 sudo pvcreate /dev/xvdh1
@@ -80,6 +79,8 @@ sudo pvcreate /dev/xvdh1
 To verify that our Physical volume has been created successfully, we run:
 
 ```sudo pvs```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lsblk2.JPG)
 
 
 
