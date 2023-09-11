@@ -80,7 +80,18 @@ To verify that our Physical volume has been created successfully, we run:
 
 ```sudo pvs```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lsblk2.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/pvs.JPG)
+
+We used vgcreate utility to add all 3 PVs to a volume group (VG). And named the VG webdata-vg
+
+```sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1```
+
+To verify that our volume group is created, we run:
+
+```sudo vgs```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/pvs.JPG)
+
 
 
 
