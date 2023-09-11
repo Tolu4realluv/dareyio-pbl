@@ -174,3 +174,101 @@ We then verify our setup by running ```df -h```
 ## Preparing the Database Server
 
 We launched a second RedHat EC2 instance with the role "DB server" and we repeated the same steps as for the Web Server, but instead of apps-lv, we created db-lv and mounted it to /db directory instead of /var/www/html/.
+
+## Installing WordPress on our Web Server EC2
+
+Firstly, we update the repository by running;
+
+```sudo yum -y update```
+
+We install wget, Apache and it’s dependencies;
+
+```sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json```
+
+We started the Apache service with
+
+```
+sudo systemctl enable httpd
+sudo systemctl start httpd
+
+```
+
+To install PHP and it’s dependencies we used;
+
+```
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+sudo yum module list php
+sudo yum module reset php
+sudo yum module enable php:remi-7.4
+sudo yum install php php-opcache php-gd php-curl php-mysqlnd
+sudo systemctl start php-fpm
+sudo systemctl enable php-fpm
+setsebool -P httpd_execmem 1
+
+```
+
+We then restarted Apache with;
+
+```sudo systemctl restart httpd```
+
+To download wordpress and copy wordpress to var/www/html we used these commands;
+
+```
+ mkdir wordpress
+ cd   wordpress
+ sudo wget http://wordpress.org/latest.tar.gz
+ sudo tar xzvf latest.tar.gz
+ sudo rm -rf latest.tar.gz
+ cp wordpress/wp-config-sample.php wordpress/wp-config.php
+ cp -R wordpress /var/www/html/
+
+```
+
+Lastly, we configured SELinux Policies with the command;
+
+```
+sudo chown -R apache:apache /var/www/html/wordpress
+sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
+sudo setsebool -P httpd_can_network_connect=1
+
+```
+
+## Installing MySQL on our DB Server EC2
+
+Firstly, we update the repository by running;
+
+```sudo yum -y update```
+
+Then we install MySQL server with the command;
+
+```sudo yum install mysql-server```
+
+To verify that the service is up and running by we use
+
+```sudo systemctl status mysqld```
+
+It shows that the service is not yet active and running, to make it active, we use the following commands;
+
+```
+sudo systemctl restart mysqld
+sudo systemctl enable mysqld
+sudo systemctl status mysqld
+
+```
+
+The image below shows that the service is now up and running
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/final.JPG)
+
+
+
+
+
+
+
+
+
+
+
+
