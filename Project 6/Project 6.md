@@ -315,7 +315,11 @@ We can now access our WordPress from our browser the link;
 
 ```http://<Web-Server-Public-IP-Address>/wordpress/``` 
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/db-credentials.png)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/wordpress%20blog.JPG)
+
+This shows that we have successfully configured Linux storage subsystem and have also deployed a full-scale Web Solution using WordPress CMS and MySQL RDBMS.
+
+
 
 
 
