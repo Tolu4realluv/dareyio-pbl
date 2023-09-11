@@ -286,7 +286,18 @@ exit
 
 we opened MySQL port 3306 on DB Server EC2. For extra security, we allow access to the DB server ONLY from our Web Server’s IP address, so in the Inbound Rule configuration we specify source as /32
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/mysql%20running.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/inbound.JPG)
+
+On our web server EC2 Instance, we installed MYSQL Client to test if we can connect successfully to wordpress DB on the DB server.
+
+```
+sudo yum install mysql
+sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
+
+```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/inbound.JPG)
+
 
 
 
