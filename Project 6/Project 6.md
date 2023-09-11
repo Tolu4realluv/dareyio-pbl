@@ -151,6 +151,14 @@ The UUID of the device will be used to update the /etc/fstab file;
 
 ```sudo blkid```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lsblk3.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/blkid.JPG)
+
+We updated /etc/fstab in the format below using our own UUID and we removed the leading and ending quotes
+
+```sudo vi /etc/fstab```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/blkid.JPG)
 
 
+UUID="63a4ea9c-3c13-46c6-80d3-e103e9525c47" BLOCK_SIZE="4096" TYPE="ext4"
+UUID="464be630-15ef-4850-b90b-9b0a5e7e2c49" BLOCK_SIZE="4096" TYPE="ext4"
