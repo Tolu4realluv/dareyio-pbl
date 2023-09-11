@@ -90,10 +90,22 @@ To verify that our volume group is created, we run:
 
 ```sudo vgs```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/pvs.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/vgs.JPG)
 
+We used lvcreate utility to create 2 logical volumes. apps-lv (using half of the PV size), and logs-lv using the remaining space of the PV size. 
+> NOTE: apps-lv will be used to store data for the Website while, logs-lv will be used to store data for logs.
 
+```
+sudo lvcreate -n apps-lv -L 14G webdata-vg
+sudo lvcreate -n logs-lv -L 14G webdata-vg
 
+```
+
+To verify that your Logical Volume has been created successfully we run:
+
+```sudo lvs```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/vgs.JPG)
 
 
 
