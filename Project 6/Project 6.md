@@ -169,6 +169,8 @@ sudo systemctl daemon-reload
 
 We then verify our setup by running ```df -h```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/UUID.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/final.JPG)
 
+## Preparing the Database Server
 
+We launched a second RedHat EC2 instance with the role "DB server" and we repeated the same steps as for the Web Server, but instead of apps-lv, we created db-lv and mounted it to /db directory instead of /var/www/html/.
