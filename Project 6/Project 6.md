@@ -43,7 +43,9 @@ After creating our EC2 server and adding the volumes, we connect to the inctance
 
 ```ssh -i "mykey.pem" ec2-user@ec2-34-230-24-179.compute-1.amazonaws.com```
 
+We use ```lsblk``` command to inspect what block devices are attached to the server. we notice names of your newly created devices. All devices in Linux reside in /dev/ directory. We inspect it with ```ls /dev/``` and make sure we see all 3 newly created block devices there – their names are xvdf, xvdh, xvdg.
 
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/attach%20volumes.png)
 
 
 
