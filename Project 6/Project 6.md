@@ -259,10 +259,34 @@ sudo systemctl status mysqld
 
 The image below shows that the service is now up and running
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/final.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/mysql%20running.JPG)
 
+## Configuring DB to work with WordPress
 
+To Create A Database;
 
+```
+sudo mysql
+CREATE DATABASE Wordpress;
+
+```
+
+We then create a user and grant the user all priviledge to our DB.
+
+```
+CREATE USER `myuser`@`<Web-Server-Private-IP-Address>` IDENTIFIED BY 'mypass';
+GRANT ALL ON wordpress.* TO 'myuser'@'<Web-Server-Private-IP-Address>';
+FLUSH PRIVILEGES;
+SHOW DATABASES;
+exit
+
+```
+
+## Configuring WordPress to connect to remote database
+
+we opened MySQL port 3306 on DB Server EC2. For extra security, we allow access to the DB server ONLY from our Web Server’s IP address, so in the Inbound Rule configuration we specify source as /32
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/mysql%20running.JPG)
 
 
 
