@@ -296,7 +296,7 @@ sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
 
 ```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/inbound.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/mysql%20client.JPG)
 
 
 
