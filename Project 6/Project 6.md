@@ -307,10 +307,17 @@ sudo vi wp-config.php
 ```
 We then edit the wp-config.php file and fill it with our DB details.
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/mysql%20client.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/content.JPG)
 
+We enabled TCP port 80 in inbound rules configuration for our Web Server EC2 (enable from everywhere 0.0.0.0/0 or from our workstation’s IP)
 
+We can now access our WordPress from our browser the link;
 
+```http://<Web-Server-Public-IP-Address>/wordpress/``` 
+
+We then fill out our database credentials 
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/content.JPG)
 
 
 
