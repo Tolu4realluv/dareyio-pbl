@@ -59,12 +59,27 @@ Then we repeat the same steps to create a single partition for the other two dri
 
 After successfully creating the partition, we can run the ```lsblk``` command again to be sure the partitions were created.
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/partition.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lsblk2.JPG)
 
+This shows that our partitions were successfully created.
 
+We now proceed to Install lvm2 package using ```sudo yum install lvm2```, then we Run ```sudo lvmdiskscan``` command to check for available partitions.
 
+> NB: Previously, in Ubuntu we used apt command to install packages, in RedHat/CentOS a different package manager is used, so we used yum command instead.
 
+We used pvcreate utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM
 
+```
+
+sudo pvcreate /dev/xvdf1
+sudo pvcreate /dev/xvdg1
+sudo pvcreate /dev/xvdh1
+
+```
+
+To verify that our Physical volume has been created successfully, we run:
+
+```sudo pvs```
 
 
 
