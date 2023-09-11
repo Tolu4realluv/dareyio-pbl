@@ -315,9 +315,7 @@ We can now access our WordPress from our browser the link;
 
 ```http://<Web-Server-Public-IP-Address>/wordpress/``` 
 
-We then fill out our database credentials 
-
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/content.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/db-credentials.png)
 
 
 
