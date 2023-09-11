@@ -43,11 +43,17 @@ After creating our EC2 server and adding the volumes, we connect to the inctance
 
 ```ssh -i "mykey.pem" ec2-user@ec2-34-230-24-179.compute-1.amazonaws.com```
 
-We use ```lsblk``` command to inspect what block devices are attached to the server. we notice names of your newly created devices. All devices in Linux reside in /dev/ directory. We inspect it with ```ls /dev/``` and make sure we see all 3 newly created block devices there – their names are xvdf, xvdh, xvdg.
+We use ```lsblk``` command to inspect what block devices are attached to the server. we notice names of your newly created devices. All devices in Linux reside in /dev/ directory. We inspect it with ```ls /dev/``` and make sure we see all 3 newly created block devices there – their names are xvdf, xvdg, & xvdh as shown in the image below.
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/attach%20volumes.png)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lsblk.JPG)
 
+Then we used the  ```df -h``` command to see all mounts and free space on our server, then we used ```gdisk``` utility to create a single partition on each of the three disks with the command:
 
+```sudo gdisk /dev/xvdf```
+
+We follow the utility command through like this:
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lsblk.JPG)
 
 
 
