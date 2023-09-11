@@ -298,7 +298,16 @@ sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
 
 ![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/mysql%20client.JPG)
 
+To change permissions and configuration so Apache could use WordPress we run the following commands;
 
+```
+cd /var/www/html/wordpress
+sudo vi wp-config.php
+
+```
+We then edit the wp-config.php file and fill it with our DB details.
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/mysql%20client.JPG)
 
 
 
