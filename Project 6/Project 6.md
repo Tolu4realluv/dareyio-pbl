@@ -51,11 +51,15 @@ Then we used the  ```df -h``` command to see all mounts and free space on our se
 
 ```sudo gdisk /dev/xvdf```
 
-We follow the utility command through like this:
+We follow the utility gdisk utility commands through like this:
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lsblk.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/partition.JPG)
 
+Then we repeat the same steps to create a single partition for the other two drives.
 
+After successfully creating the partition, we can run the ```lsblk``` command again to be sure the partitions were created.
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/partition.JPG)
 
 
 
