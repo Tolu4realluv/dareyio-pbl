@@ -105,8 +105,16 @@ To verify that your Logical Volume has been created successfully we run:
 
 ```sudo lvs```
 
-![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/vgs.JPG)
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lvs.JPG)
 
+To verify the entire setup we run:
 
+```
+sudo vgdisplay -v #view complete setup - VG, PV, and LV
+sudo lsblk
+
+```
+
+![](https://github.com/Tolu4realluv/dareyio-pbl/blob/main/Project%206/lvs.JPG)
 
 
